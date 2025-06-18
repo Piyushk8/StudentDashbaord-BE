@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "dev": "nodemon ./dist/index.js",
+    "seed": "node ./dist/lib/seed.js",
+    "watch": "npx tsc -w"
+  },
+  "devDependencies": {
+    "gts": "^6.0.2"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/mongoose": "^5.11.96",
+    "axios": "^1.10.0",
+    "cors": "^2.8.5",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.2",
+    "zod": "^3.25.64"
+  }
+}
