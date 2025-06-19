@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 connectDB();
 
-app.use(cors({origin:["http://localhost:5173"]}))
+app.use(cors({origin:["http://localhost:5173",process.env.FRONTEND_URL!!]}))
 
 app.use("/s",StudentRouter)
 const PORT = 3000;
