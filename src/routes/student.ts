@@ -1,16 +1,23 @@
-
-
-
-
 import { Router } from "express";
 import mongoose from "mongoose";
-import { getAllStudents, getStudentById, getStudentContestHistory, getStudentContestStats, getStudentProblemStats, getStudentRecentProblems } from "../controllers/student";
+import {
+    checkContestSyncStatus,
+    checkSyncStatus,
+  getAllStudents,
+  getStudentById,
+  getStudentContestHistory,
+  getStudentContestStats,
+  getStudentProblemStats,
+  getStudentRecentProblems,
+} from "../controllers/student";
 export const StudentRouter = Router();
 // const studentController = require('../controllers/studentController');
 
 // CRUD operations
-StudentRouter.get('/',getAllStudents);
-StudentRouter.get('/:id',getStudentById);
+StudentRouter.get("/", getAllStudents);
+StudentRouter.get("/:id", getStudentById);
+StudentRouter.get("/:id/sync",checkSyncStatus)
+StudentRouter.get("/:id/syncContest",checkContestSyncStatus)
 
 StudentRouter.get("/:id/contests", getStudentContestHistory);
 StudentRouter.get("/:id/contests/stats", getStudentContestStats);
@@ -23,4 +30,3 @@ StudentRouter.get("/:id/p", getStudentRecentProblems);
 
 // // Download CSV
 // router.get('/download/csv', studentController.downloadCSV);
-

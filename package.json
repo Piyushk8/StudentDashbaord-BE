@@ -1,7 +1,10 @@
 {
+  "main": "dist/index.js",
   "scripts": {
+    "build":"tsc",
     "dev": "nodemon ./dist/index.js",
     "seed": "node ./dist/lib/seed.js",
+    "start":"node dist/index.js",
     "watch": "npx tsc -w"
   },
   "devDependencies": {

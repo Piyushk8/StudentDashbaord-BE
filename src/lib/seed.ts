@@ -95,6 +95,7 @@ export const seedCFSubmissions = async () => {
           problemRating: s.problem.rating,
           submissionTime: new Date(s.creationTimeSeconds * 1000),
           verdict: s.verdict,
+          contestId:s.problem.contestId,
           problemTags: s.problem.tags,
           language: s.programmingLanguage,
           timeMs: s.timeConsumedMillis,
